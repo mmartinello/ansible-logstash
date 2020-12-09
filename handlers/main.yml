@@ -1,2 +1,5 @@
 ---
-# handlers file for mmartinello.logstash
+- name: Restart Logstash
+  service:
+    name: logstash
+    state: restarted
