@@ -7,12 +7,12 @@
 
 - name: Add Elasticsearch Repository Key
   apt_key:
-    url: "{{ kibana_apt_repository_key_url }}"
+    url: "{{ logstash_apt_repository_key_url }}"
     state: present
 
 - name: Add Elasticsearch APT Repository
   apt_repository:
-    repo: deb {{ kibana_apt_repository_url }} stable main
+    repo: deb {{ logstash_apt_repository_url }} stable main
     state: present
     filename: elastic
 
