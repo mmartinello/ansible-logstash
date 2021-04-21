@@ -1,8 +1,14 @@
 ---
+# Elastic APT repository URL and key
 logstash_apt_repository_key_url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
 logstash_apt_repository_url: https://artifacts.elastic.co/packages/7.x/apt
+
+# Configuration directory path
 logstash_etc_path: /etc/logstash
 
 # Elasticsearch hosts
 logstash_elasticsearch_hosts:
   - "http://127.0.0.1:9200"
+
+# Enable and start Logstash service at startup
+logstash_service_enabled: true

@@ -1,3 +1,9 @@
 ---
 - include_tasks: install-Debian.yml
   when: ansible_os_family in ["Debian", "Ubuntu"]
+
+- name: Ensure Logstash service is enabled
+  service:
+    name: logstash
+    enabled: "{{ logstash_service_enabled }}"
+  notify: Restart Logstash
